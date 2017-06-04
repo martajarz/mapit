@@ -24,16 +24,17 @@ function initMap() {
             position: event.latLng,
             map: map
         });
-    })
+
+        point.addListener("click", function() {
+        infoBubble.open(map, point);
+        });
+    });
 
     // point = new google.maps.Marker({
     //     position: start,
     //     map: map
     // });
 
-    point.addListener("click", function() {
-        infoBubble.open(map, point);
-    });
 }
 
 function saveData() {
