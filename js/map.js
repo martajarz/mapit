@@ -19,10 +19,17 @@ function initMap() {
         content: document.getElementById('message')
     });
     
-    point = new google.maps.Marker({
-        position: start,
-        map: map
-    });
+    google.maps.event.addListener(map, 'click', function(event) {
+        point = new google.maps.Marker({
+            position: event.latLng,
+            map: map
+        });
+    })
+
+    // point = new google.maps.Marker({
+    //     position: start,
+    //     map: map
+    // });
 
     point.addListener("click", function() {
         infoBubble.open(map, point);
