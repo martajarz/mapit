@@ -25,17 +25,12 @@ function initMap() {
             map: map
         });
 
-        point.addListener("click", function() {
+        google.maps.event.addListener(point, "click", function() {
         infoBubble.open(map, point);
         });
     });
-
-    // point = new google.maps.Marker({
-    //     position: start,
-    //     map: map
-    // });
-
 }
+
 
 function saveData() {
     infoBubble.close();
