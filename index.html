@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map it!</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="info">
+      <table>
+      <tr><td>Name:</td> <td><input type='text' id='name'></td></tr>
+      <tr><td>Description:</td> <td><input type='text' id='description'></td></tr>
+      <tr><td>Category:</td> <td><select id='category'> +
+                <option value='bar' SELECTED>bar</option>
+                <option value='restaurant'>restaurant</option>
+                </select> </td></tr>
+      <tr><td></td><td><input type='button' value='Save' onclick='saveData()'></td></tr>
+      </table>
+    </div>
+    <div id="message">Location saved</div>
+
+    <script src="js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRjUG2jIOG9ZY1o7pnSY8yJ8l_z1RFcZQ&callback=initMap" type="text/javascript"></script>
+  </body>
+</html>
+
+
+
+<!-- AIzaSyBRjUG2jIOG9ZY1o7pnSY8yJ8l_z1RFcZQ -->
