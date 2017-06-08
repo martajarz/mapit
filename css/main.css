@@ -13,23 +13,23 @@ body{
 
 .logo {
   position: fixed;
-  right: 9vw;
-  top: 2vw;
-  height: 6vw;
+  right: 9vh;
+  top: 2vh;
+  height: 6vh;
   z-index: 90;
 }
 
 .login {
   position: fixed;
-  width: 5vw;
-  height: 5vw;
-  top: 2vw;
-  right: 2vw;
-  background-color: #03c3eb;
-  border-radius: 2.5vw;
+  width: 5vh;
+  height: 5vh;
+  top: 2vh;
+  right: 2vh;
+  background-color: #ee5800;
+  border-radius: 2.5vh;
   border-width: 0;
   z-index: 90;
-  /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); 
 }
 
 .login_window {
@@ -44,6 +44,7 @@ body{
   background-color: #fff;
   z-index: 100;
   padding: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); 
 }
 
 .hidden {
