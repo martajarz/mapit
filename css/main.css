@@ -6,44 +6,46 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+#main {
+  position: relative;
+}
+
 .map {
   width: 100%;
   height: 100vh;
 }
 
 .logo {
-  position: fixed;
-  right: 9vh;
-  top: 2vh;
-  height: 6vh;
-  z-index: 90;
-}
-
-.login {
-  position: fixed;
-  width: 5vh;
-  height: 5vh;
-  top: 2vh;
-  right: 2vh;
-  background-color: #ee5800;
-  border-radius: 2.5vh;
-  border-width: 0;
-  z-index: 90;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); 
-}
-
-.login_window {
   position: absolute;
-  margin: auto;
+  right: 100px;
+  top: 20px;
+  height: 80px;
+  z-index: 90;
+}
+
+.button_navbar {
+  position: absolute;
+  width: 30px;
+  height: 45px;
+  top: 25px;
+  right: 2vh;
+  border: none;
+  background-color: #ee5800;
+  -webkit-clip-path: polygon(100% 0%, 25% 50%, 100% 100%, 75% 100%, 0% 50%, 75% 0);
+  clip-path: polygon(100% 0%, 25% 50%, 100% 100%, 75% 100%, 0% 50%, 75% 0);
+  z-index: 90;
+}
+
+.navbar {
+  position: absolute;
+  margin: 0;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
+  width: 300px;
+  height: 100vh;
   background-color: #fff;
   z-index: 100;
-  padding: 10px;
+  padding: 0px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19); 
 }
 
@@ -56,6 +58,7 @@ body{
 }
 
 .exit_button {
+  font-size: 15px;
   height: 30px;
   width: 30px;
   border-width: 1px;

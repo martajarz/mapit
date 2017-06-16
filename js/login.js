@@ -1,11 +1,14 @@
-var loginWindow
+var navBar;
+var mainWidth;
 
 function openLoginWindow() {
-    loginWindow = document.getElementById("login_window");
-    loginWindow.className = "login_window show";
+    navBar = document.getElementById("navbar");
+    navBar.className = "navbar show";
+    mainWidth = document.getElementById("main");
+    mainWidth.style.marginRight = "300px";
 }
 
 function closeLoginWindow() {
-    loginWindow = document.getElementById("login_window");
-    loginWindow.className = "login_window hidden";
+    navBar = document.getElementById("navbar");
+    navBar.className = "navbar hidden";
 }
