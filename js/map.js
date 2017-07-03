@@ -10,6 +10,7 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: start,
         zoom: 15,
+        mapTypeControl: false,
         styles: mapstyles
     });
 
@@ -21,10 +22,13 @@ function initMap() {
         content: document.getElementById('message')
     });
     
+    var image = 'img/marker.png';
+
     google.maps.event.addListener(map, 'click', function(event) {
         point = new google.maps.Marker({
             position: event.latLng,
-            map: map
+            map: map,
+            icon: image
         });
 
         google.maps.event.addListener(point, "click", function() {
