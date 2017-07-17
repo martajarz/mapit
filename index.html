@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Map it!</title>
-    <link rel="stylesheet" href="css/main.css">
+    <!--build:css css/styles.min.css-->
+      <link rel="stylesheet" href="css/main.css">
+    <!--endbuild-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <section id="main">
       <div id="map" class="map"></div>
       <header id="header">
-        <img src="img/mapit.png" alt="Mapit logo" class="logo">
+        <img src="images/mapit.png" alt="Mapit logo" class="logo">
         <div class="logo_bg"></div>
         <button class="button_sidebar" type="button" onclick="sidebarClick()"></button>
         <nav>
-          <button class="poi poi_food" type="button"><img src="img/icon_food.png" alt="food icon"></button>
-          <button class="poi poi_coffee" type="button"><img src="img/icon_coffee.png" alt="coffee icon"></button>
-          <button class="poi poi_party" type="button"><img src="img/icon_party.png" alt="party icon"></button>
+          <button class="poi poi_food" type="button"><img src="images/icon_food.png" alt="food icon"></button>
+          <button class="poi poi_coffee" type="button"><img src="images/icon_coffee.png" alt="coffee icon"></button>
+          <button class="poi poi_party" type="button"><img src="images/icon_party.png" alt="party icon"></button>
         </nav>
       </header>
     </section>
@@ -49,9 +51,11 @@
     </div>
     <div id="message">Location saved</div>
 
-    <script src="js/map.js"></script>
+    <!--build:js js/main.min.js -->
+      <script src="js/map.js"></script>
+      <script src="js/login.js"></script>
+    <!-- endbuild -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRjUG2jIOG9ZY1o7pnSY8yJ8l_z1RFcZQ&callback=initMap" type="text/javascript"></script>
-    <script src="js/login.js"></script>
   </body>
 </html>
 

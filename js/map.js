@@ -22,7 +22,7 @@ function initMap() {
         content: document.getElementById('message')
     });
     
-    var image = 'img/marker.png';
+    var image = 'images/marker.png';
 
     google.maps.event.addListener(map, 'click', function(event) {
         point = new google.maps.Marker({
