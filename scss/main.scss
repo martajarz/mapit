@@ -26,7 +26,7 @@ body{
 
 .logo_bg {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 129, 229, .6);
   border: none;
   width: 100%;
   height: 50px;
@@ -58,9 +58,8 @@ body{
   height: 50px;
   top: 30px;
   z-index: 90;
-  border: 5px solid  rgba(255, 255, 255, .2);
-  border-radius: 3px;
-  background-color: rgba(255, 255, 255, .3);
+  border: none;
+  background: none;
   transition: all .3s ease;
 }
 
@@ -70,24 +69,43 @@ body{
 }
 
 .poi:hover {
-  transform: scale(1.1);
-  border: 5px solid  #fff;
+  transform: scale(1.05);
+  border-radius: 3px;
+}
+
+.poi_important {
+  left: 50px;
+}
+
+.poi_important:hover {
+  background-color: #ee5800;
 }
 
 .poi_food {
-  left: 50px;
-  /*background-color: #ee002d;*/
+  left: 130px;
+}
+
+.poi_food:hover {
+  background-color: #eeca00;
 }
 
 .poi_coffee {
-  left: 130px;
-  /*background-color: #b300ee;*/
+  left: 210px;
 }
 
-.poi_party {
-  left: 210px;
-  /*background-color: #eeca00;*/
+.poi_coffee:hover {
+  background-color: #b300ee;
 }
+
+
+.poi_party {
+  left: 290px;
+}
+
+.poi_party:hover {
+  background-color: #ee002d;
+}
+
 
 .shape {
   width: 400px;
