@@ -61,16 +61,12 @@ body{
   border: none;
   background: none;
   transition: all .3s ease;
+  border-radius: 3px;
 }
 
 .poi img {
   height: 33px;
   padding: auto;
-}
-
-.poi:hover {
-  transform: scale(1.05);
-  border-radius: 3px;
 }
 
 .poi_important {

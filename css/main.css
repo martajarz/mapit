@@ -53,15 +53,12 @@ body {
   z-index: 90;
   border: none;
   background: none;
-  transition: all .3s ease; }
+  transition: all .3s ease;
+  border-radius: 3px; }
 
 .poi img {
   height: 33px;
   padding: auto; }
-
-.poi:hover {
-  transform: scale(1.05);
-  border-radius: 3px; }
 
 .poi_important {
   left: 50px; }
