@@ -14,6 +14,7 @@ function initMap() {
         mapTypeControl: false,
         styles: mapstyles
     });
+    infoWindow = new google.maps.InfoWindow;
 
     // Bubble window 
     infoBubble = new google.maps.InfoWindow({
@@ -48,7 +49,7 @@ function initMap() {
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
-            map.setCenter (pos);
+            map.setCenter(pos);
         }, function() {
             handleLocationError(true, infoWindow, map.gerCenter());
         });
@@ -61,7 +62,15 @@ function initMap() {
 function saveData() {
     infoBubble.close();
     messageBubble.open(map, point);
-};
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser doesn\'t support geolocation. ');
+    infoWindow.open(map);
+}
 
 mapstyles = [
     {
@@ -216,10 +225,3 @@ mapstyles = [
     }
 ]
 
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-    'Error: The Geolocation service failed.' :
-    'Error: Your browser doesn\'t support geolocation. ');
-    infoWindow.open(map);
-}
