@@ -49,10 +49,11 @@ function initMap() {
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
+            // yyyyyyyyyyyyyy
             map.setCenter(pos);
             setTimeout('infoWindow.close()', 1500);
         }, function() {
-            handleLocationError(true, infoWindow, map.gerCenter());
+            handleLocationError(true, infoWindow, map.getCenter());
         });
     } else {
         // Browser doesn't support Geolocation
