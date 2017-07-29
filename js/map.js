@@ -50,6 +50,7 @@ function initMap() {
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
             map.setCenter(pos);
+            setTimeout('infoWindow.close()', 1500);
         }, function() {
             handleLocationError(true, infoWindow, map.gerCenter());
         });
@@ -70,6 +71,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation. ');
     infoWindow.open(map);
+    setTimeout('infoWindow.close()', 4000)
 }
 
 mapstyles = [
