@@ -1,7 +1,7 @@
-var sidebar;
-var mainWidth;
-
 function sidebarClick() {
+    var sidebar;
+    var mainWidth;
+
     sidebar = document.getElementById("sidebar");
     mainWidth = document.getElementById("main");
 
