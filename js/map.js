@@ -7,12 +7,18 @@ var mapstyles;
 
 function initMap() {
     var start = {lat: 54.352156, lng: 18.645932};
-    
+
+  function startPoint() {
+      
+  }
+
     map = new google.maps.Map(document.getElementById('map'), {
         center: start,
         zoom: 15,
         mapTypeControl: false,
-        styles: mapstyles
+        styles: mapstyles,
+        fullscreenControl: false,
+        gestureHandling: 'greedy'
     });
     infoWindow = new google.maps.InfoWindow;
 
@@ -46,10 +52,9 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            infoWindow.open(map);
-            // yyyyyyyyyyyyyy
+            // infoWindow.setPosition(pos);
+            // infoWindow.setContent('Location found.');
+            // infoWindow.open(map);
             map.setCenter(pos);
             setTimeout('infoWindow.close()', 1500);
         }, function() {
