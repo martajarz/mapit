@@ -6,7 +6,7 @@ var infoWindow;
 var mapstyles;
 
 function initMap() {
-    var start = {lat: 54.352156, lng: 18.645932};
+    var start = {lat: 40, lng: -10};
 
   function startPoint() {
       
@@ -14,7 +14,7 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: start,
-        zoom: 15,
+        zoom: 3,
         mapTypeControl: false,
         styles: mapstyles,
         fullscreenControl: false,
@@ -56,9 +56,7 @@ function initMap() {
             // infoWindow.setContent('Location found.');
             // infoWindow.open(map);
             map.setCenter(pos);
-            setTimeout('infoWindow.close()', 1500);
-        }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
+            map.setZoom(13);
         });
     } else {
         // Browser doesn't support Geolocation
