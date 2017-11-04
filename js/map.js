@@ -72,8 +72,8 @@ function saveData() {
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
-        'Error: The Geolocation service failed.' :
-        'Error: Your browser doesn\'t support geolocation. ');
+        'Error: Your browser doesn\'t support geolocation. ':
+         'Error: The Geolocation service failed.');
     infoWindow.open(map);
     setTimeout('infoWindow.close()', 4000)
 }
