@@ -13,8 +13,6 @@ function callServer() {
     });
 }
 
-const SampleComponent: React.FC = function() {
-  return <div>This is a sample component{callServer()}</div>;
+export const SampleComponent: React.FC = function() {
+  return <div>This is a sample component {callServer()}</div>;
 };
-
-export default SampleComponent;
