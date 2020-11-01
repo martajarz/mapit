@@ -4,6 +4,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/
+      },
+      {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
@@ -19,6 +24,6 @@ module.exports = {
     alias: {
       Components: path.resolve(__dirname, "src/components")
     },
-    extensions: [".jsx", ".js", ".scss", ".json"]
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".scss", ".json"]
   }
 };
