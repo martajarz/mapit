@@ -1,8 +1,26 @@
 import React from "react";
-import { SampleComponent } from "../components/index";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Main, Login, SampleComponent, Navigation } from "../components/index";
 
 function App() {
-  return <SampleComponent />;
+  return (
+    <Router>
+      <div>
+        <Navigation />
+        <Switch>
+          <Route path="/sample">
+            <SampleComponent />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <Main />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
